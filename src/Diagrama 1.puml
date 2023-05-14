@@ -1,0 +1,24 @@
+@startuml
+actor :Empleado: as emp
+actor :Administrador: as admin
+rectangle EmpresaPedidos {
+usecase (Introducir pedido) as intped
+usecase (Cancelar pedido) as canped
+usecase (Obtener estado pedido) as estped
+usecase (Borrar pedido) as borped
+usecase (Buscar pedido) as busped
+usecase (Alta cliente) as altcli
+usecase (Buscar cliente) as buscli
+usecase (Nuevo producto) as newprod
+usecase (Borrar producto) as borprod
+}
+admin--newprod
+admin--borprod
+emp--intped
+emp--canped
+emp--estped
+emp--borped
+emp--busped
+emp--altcli
+emp--buscli
+@enduml

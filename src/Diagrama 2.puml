@@ -1,0 +1,22 @@
+@startuml
+actor :Empleado: as emp
+usecase (Alta cliente) as altcli
+usecase (Introducir pedido) as intped
+usecase (Buscar cliente) as buscli
+usecase (Obtener estado pedido) as estped
+usecase (Pago en cuenta) as pagcuen
+usecase (Pago con  tarjeta) as pagtar
+usecase (Buscar pedido) as busped
+usecase (Cancelar pedido) as canped
+emp--altcli
+emp--intped
+emp--estped
+emp--busped
+emp--canped
+altcli.>intped:<<extends>>
+intped.>busped:<<includes>>
+pagtar.>intped:<<extends>>
+pagcuen.>intped:<<extends>>
+estped.>busped:<<includes>>
+canped.>busped:<<includes>>
+@enduml

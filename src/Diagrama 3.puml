@@ -1,0 +1,15 @@
+@startuml
+actor :socio: as so
+actor :bibliotecario: as bib
+rectangle Biblioteca {
+usecase (Reservar libro) as rl
+usecase (Prestar libro) as pl
+usecase (Devolver libro) as dl
+usecase (Actualizar catálogo) as ac
+}
+so--rl
+so--pl
+bib--pl
+so--dl
+bib--ac
+@enduml
